@@ -5,9 +5,11 @@ import { MainList } from '../lists/MainList'
 const list = [
   {
     title: 'ホーム',
+    url: 'mangajam://home',
   },
   {
     title: '連載',
+    url: 'mangajam://serial',
   },
 ]
 
