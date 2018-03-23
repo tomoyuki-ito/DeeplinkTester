@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "DeeplinkTester",
-    "description": "This project is really great.",
+    "description": "マンガJamのディープリンクの動作をテストします。使用の際はマンガJamのアプリがインストールされている必要がります。ステージング用、本番用の両方に対応しています。",
     "slug": "DeeplinkTester",
     "privacy": "unlisted",
     "sdkVersion": "25.0.0",
