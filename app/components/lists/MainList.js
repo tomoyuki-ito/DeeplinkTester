@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Linking } from 'react-native'
+import { View, Linking, AlertIOS } from 'react-native'
 import { List, ListItem, Text } from 'native-base'
 
 export const MainList = (props) => {
@@ -10,7 +10,21 @@ export const MainList = (props) => {
         return (
           <ListItem
             onPress={() => {
-              Linking.openURL(item.url)
+              if (item.inputTitle) {
+                AlertIOS.prompt(
+                  `Enter a ${item.inputTitle}`,
+                  null,
+                  text => {
+                    const newUrl = `${item.url}${text}`
+                    Linking.openURL(newUrl).catch(error => alert('The application is not installed'))
+                  },
+                  'plain-text',
+                  '',
+                  'number-pad'
+                )
+              } else {
+                Linking.openURL(item.url).catch(error => alert('The application is not installed'))
+              }
             }}
           >
             <View

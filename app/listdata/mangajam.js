@@ -32,7 +32,8 @@ export const createListdata = (env) => {
     },
     {
       title: 'ホームタブ → 作品詳細',
-      url: createURL('home/comicdetail/comicid=1831'),
+      url: createURL('home/comicdetail/comicid='),
+      inputTitle: 'comicid',
     },
     {
       title: '人気タブ → ランキング',
@@ -44,7 +45,8 @@ export const createListdata = (env) => {
     },
     {
       title: 'ホームタブ → 特集',
-      url: createURL('home/comicdetail/featureid=1'),
+      url: createURL('home/feature/featureid='),
+      inputTitle: 'featureid',
     },
   ]
 }
